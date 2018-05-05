@@ -11,7 +11,7 @@ function f_main(dirname) {
 	var i_last_name = ''
 	const fileDirectory = dirname
 	fs.watch(fileDirectory + '/img', function(eventType, filename) {
-		if (filename.search(/(BMP|CUR|GIF|ICO|JPG|PNG|PSD|TIFF|WebP|SVG|DDS)/i) == -1) return;
+		if (filename.search(/(BMP|CUR|GIF|ICO|JPG|PNG|PSD|TIFF|WebP|SVG|DDS)$/i) == -1) return;
 		// 判断图片类型
 		if (eventType == 'change' && filename.search(/.*?_tmp\d+/) == -1) {
 			//处理Photoshop出来的临时文件
