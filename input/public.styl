@@ -25,6 +25,11 @@ body
 		display flex
 		align-items center
 		justify-content center
+		&.set
+			span
+				width 46px
+				&:after
+					display none
 		// &:hover
 		// 	svg 
 		// 		fill #303232
@@ -96,6 +101,10 @@ body
 				background url() left center/auto 60px no-repeat
 				&:after
 					display none
+		&.standard
+			padding-top 0
+			border-bottom 1px solid #e4e4e4
+			border-top 1px solid #e4e4e4
 		h3
 			position relative
 			font-size 30px
@@ -264,7 +273,7 @@ body
 				color #4a4a4a
 				line-height 76px
 				&+.item
-					border-top 1px solid #f7f7f8
+					border-top 1px solid #e4e4e4
 				p
 					flex 0 0 500px
 					width 100%
@@ -402,11 +411,23 @@ body
 				color #4a4a4a
 	.issue
 		.item
-			padding 20px 30px 30px
+			padding 20px 30px 0
 			display flex
 			justify-content space-between
 			border-bottom 1px solid #e4e4e4
 			border-top 1px solid #e4e4e4
+			&.resuit
+				.pic
+					.name	
+						text-align center
+						line-height 2
+						font-size 20px
+						color #4a4a4a
+				.content
+					.more-info
+						align-items center
+					h3
+						padding-top 0
 		.pic
 			flex 0 0 90px
 			width 90px
@@ -423,6 +444,20 @@ body
 				font-size 24px
 				line-height 2
 				color #000000
+			.good
+				padding-top 17px
+				color #126fb5
+				padding-left 45px
+				line-height 1.5
+				background url('../img/ae2c9ff01d4230b37eff37e83c881d41-28+37.png') left center /28px auto no-repeat
+				&.master
+					color #126fb5
+					background-image url('../img/13f7f20be8639a56bea31749cdc9486a-42+36.png')
+					background-size 42px auto
+				&.cost
+					color #e86348
+					background-image url('../img/16dd32fccf391bd48aa6efc54bddfe5c-38+37.png')
+					background-size 38px auto
 			.more-info
 				display flex
 				justify-content space-between
@@ -441,6 +476,9 @@ body
 				display flex
 				height 44px
 				justify-content space-between
+				&.pr-28
+					.read
+						padding-right 28px
 				&>*
 					height 100%
 					display flex
@@ -461,6 +499,10 @@ body
 						background #f7ab00
 						border-radius 5px
 						text-align center
+				.reply
+					width 48px
+					height 48px
+					background url('../img/ba69d99de9bd6d91419f274bc57d3220-84+84.svg') center center/48px 100% no-repeat
 				.read
 					padding-left 50px
 					font-size 21px
@@ -475,8 +517,148 @@ body
 						background-image url('../img/e62a097ba8e08bed728d0ad1baef778a-46+39.svg')
 		.none-height
 			height 22px
-			background #f7f7f8	
-				
+			background #f7f7f8
+			&.btn-group
+				height 60px
+				display flex
+				align-items center
+				justify-content center
+				border-bottom 1px solid #e4e4e4
+				&~.none-height
+					display none
+				&~.item
+					border-top none
+				&~.item h3
+					padding-top 0
+				a
+					display block
+					font-size 18px
+					color #ffffff
+					width 204px
+					height 46px
+					text-align center
+					background #f7ab00
+					border-radius 5px
+					span
+						display inline-block
+						padding-left 50px
+						line-height 46px
+						background url('../img/4cd5241c91d845a6e98918103160ff47-44+42.svg') left center/35px no-repeat
+	.personal-center
+		height 307px
+		display flex
+		justify-content center
+		align-items center
+		flex-direction column
+		.pic
+			border 5px solid #ffffff
+			border-radius 50%
+			img
+				width 125px
+				height 125px
+				border-radius 50%
+		h3
+			font-size 30px
+			color #000000
+			line-height 2
+		.describe
+			font-size 18px
+			color #333333
+			line-height 1
+	.personal-info
+		display flex
+		background #f7f7f8
+		.item
+			flex 1
+			display flex
+			justify-content center
+			text-align center
+			&.item-2
+				span
+					background-image url('../img/fec1f696ad4fe06a522957b4d98f96d1-62+56.svg')
+			&.item-3
+				span
+					background-image url('../img/4c6550d1c209a2814bc7be128bc684bb-41+56.svg')
+			span
+				display inline-block
+				height 85px
+				font-size 28px
+				color #333333
+				line-height 85px
+				padding-left 54px
+				background url('../img/0b9c8424fb7ca3bc747976d3e64c6ea3-58+58.svg') left center/43px auto no-repeat
+	.personal-menu
+		height 153px
+		display flex
+		align-items center
+		border-top 1px solid #e4e4e4
+		border-bottom 1px solid #e4e4e4
+		.item
+			padding 6px 0 20px
+			flex 1
+			text-align center
+			&.item-2
+				.pic
+					background-image url('../img/2043d3eaea3d84e6373aa10f2027ea1f-83+84.svg')
+					background-size 62px auto
+			&.item-3
+				.pic
+					background-image url('../img/f3ab5d4c7f8ab3343c91cb87b55d4b66-69+84.svg')
+					background-size 62px auto
+			&.item-4
+				.pic
+					background-image url('../img/57fb0288c103b633f8f8fae446f9e21e-85+85.svg')
+					background-size 65px auto
+			.pic
+				width 100%
+				height 100px
+				background url('../img/0d508eb677ba92fb0fcdcf5cfa71c4c6-71+84.svg') center center/52px auto no-repeat
+			h3
+				font-size 24px
+				color #4a4a4a
+				line-height 1
+	.personal-none-height
+		height 22px
+		background #f7f7f8
+	.personal-columns-menu
+		padding 5px 0 10px
+		border-top 1px solid #e4e4e4
+		padding-left 23px
+		a
+			display flex
+		.pic
+			flex  0 0 130px
+			width 130px
+			height 101px
+			display flex
+			align-items center
+			justify-content center
+			img
+				height 60%
+		.content
+			flex  1
+			display flex
+			justify-content space-between
+			align-items center
+			padding-right 100px
+			height 101px
+			border-bottom 1px solid #e4e4e4
+			line-height 101px
+			font-size 24px
+			color #4a4a4a
+			background url('../img/a14ec59c0ba9c97fb9227e4ab9c63d5b-22+39.svg') center right 60px /13px auto no-repeat
+			.purple
+			.orange
+				height 32px
+				padding 0 10px
+				border-radius 16px
+				font-size 18px
+				color #ffffff
+				line-height 32px
+			.purple
+				background #8968f3
+			.orange
+				background #f6ad32
 .footer
 	position fixed
 	bottom 0
@@ -541,3 +723,46 @@ body
 	line-height 66px
 	color #000000
 	background #ffc636
+
+
+
+.check-login
+	padding-bottom 10vh
+	.pic
+		margin 13vh auto
+		display flex
+		align-items center
+		justify-content center
+		width 288px
+		height 294px
+		background url('../img/a596cdeb46d68256bf663547f9692f2b-95+97.svg') center center/100% 100% no-repeat
+		img
+			width 276px
+			height 276px
+			border-radius 50%
+		input
+			display none
+	.login-tips
+		display flex
+		justify-content center
+		span
+			margin 0 15px
+			width 135px
+			height 47px
+			font-size 24px
+			color #333333
+			background #e5e5e5
+			border-radius 10px
+			text-align center
+			line-height 47px
+	.btn-login
+		margin 40px auto
+		display block
+		text-align center
+		width 600px
+		height 80px
+		font-size 30px
+		color #000000
+		border-radius 20px
+		line-height 80px
+		background #f6ad32
