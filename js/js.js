@@ -2,11 +2,12 @@ var mySwiper = new Swiper('.banner .swiper-container', {
     pagination: '.banner .swiper-pagination',
     loop: true,
     paginationClickable: true,
+    autoplay:3000,
 })
 var notice = new Swiper('.notice .swiper-container', {
     loop: true,
-    slidesPerView: 1.5,
-    spaceBetween: 30
+    spaceBetween: 30,
+    autoplay:3000,
 })
 
 
@@ -32,3 +33,16 @@ try {
 } catch (error) {
     console.log(error)
 }
+
+$('.javascript-answers').on('click',function() {
+    var target = $(this).attr('data-parents');
+    $(this).parents(target).nextAll('.answers-edit').eq(0).slideToggle();
+})
+
+$('.javascript-reply').on('click',function() {
+    var target = $(this).attr('data-parents');
+    $(this).parents(target).nextAll('.child-reply').eq(0).slideToggle();
+})
+$('.child-reply .close').on('click',function() {
+    $(this).parent().slideUp();
+})

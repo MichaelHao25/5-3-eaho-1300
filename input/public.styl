@@ -1,6 +1,7 @@
 @import('./reset.css')
 body
 	font-size 16Px
+	font-family: 'Microsoft yahei', Arial, sans-serif
 .pc
 	@media(min-width 768){
 		left 50%
@@ -44,12 +45,12 @@ body
 				right 0
 				top 0
 				text-align center
-				width 30Px
-				height 30Px
-				line-height 30Px
+				width 30px
+				height 30px
+				line-height 30px
 				transform translate(50%, -50%)
 				border-radius 50%
-				font-size 14Px
+				font-size 14px
 				color #ffffff
 				background #e86348
 		svg
@@ -67,7 +68,7 @@ body
 		.text
 			display block
 			padding 10px
-			width 540px
+			width 490px
 			line-height 44px
 			box-sizing border-box
 			background rgba(255,255,255,0.7)
@@ -291,13 +292,17 @@ body
 		align-items center
 		justify-content center
 		background #f7f7f8
+		padding 0 30px
 		.form
 			display flex
 			justify-content center
+			width 100%
+			flex 1
 			.text
+				flex 1
 				display block
 				padding 10px
-				width 460px
+				width 100%
 				line-height 30px
 				box-sizing border-box
 				background #ffffff
@@ -410,6 +415,14 @@ body
 			p
 				color #4a4a4a
 	.issue
+		.child-reply
+			display none
+			background #f7f7f9
+			.close
+				height 45px
+				background url('../img/b108ce47a42790a9c7782e1cec51ac09-39+22.svg') right 60px center/40px auto no-repeat
+			.item+.item
+				border-top none
 		.item
 			padding 20px 30px 0
 			display flex
@@ -550,6 +563,7 @@ body
 		justify-content center
 		align-items center
 		flex-direction column
+		background url() center top /cover no-repeat
 		.pic
 			border 5px solid #ffffff
 			border-radius 50%
@@ -624,6 +638,31 @@ body
 		padding 5px 0 10px
 		border-top 1px solid #e4e4e4
 		padding-left 23px
+		.row
+			&:nth-child(1)
+				.pic
+					img
+						width 46px
+			&:nth-child(2)
+				.pic
+					img
+						width 33px
+			&:nth-child(3)
+				.pic
+					img
+						width 39px
+			&:nth-child(4)
+				.pic
+					img
+						width 46px
+			&:nth-child(5)
+				.pic
+					img
+						width 38px
+			&:nth-child(6)
+				.pic
+					img
+						width 45px
 		a
 			display flex
 		.pic
@@ -633,8 +672,6 @@ body
 			display flex
 			align-items center
 			justify-content center
-			img
-				height 60%
 		.content
 			flex  1
 			display flex
@@ -670,7 +707,7 @@ body
 	.item
 		display block
 		padding 10px 0 15px
-		flex 0 0 20%
+		flex 1
 		text-align center
 		font-size 18px
 		color #333333
@@ -766,3 +803,139 @@ body
 		border-radius 20px
 		line-height 80px
 		background #f6ad32
+
+
+
+.answers-edit
+	padding 0 30px
+	display none
+	.textarea
+		margin 20px 0
+		padding 10px
+		height 200px
+		width 100%
+		font-size 20px
+		color #000
+		line-height 1.5
+		border 1px solid #e4e4e4
+		border-radius 10px
+		outline none
+		box-sizing border-box
+		box-shadow none
+	.enter
+		float right
+		display block
+		width 100px
+		height 40px
+		font-size 20px
+		color #ffffff
+		line-height 40px
+		text-align center
+		border-radius 8px
+		background #313333
+	.clear
+		clear both
+
+.more-answers
+	padding 0 30px
+	font-size 20px
+	text-align center
+	line-height 3
+	color #6d6d6d
+	border-bottom 20px solid #f7f7f8
+
+
+
+
+
+.layout
+	max-width 100%
+	.header-search
+		padding 10px 0
+		border-bottom 1px solid #eef2f7
+		input
+			margin 0 auto
+			display block
+			width 90%
+			padding 10px
+			line-height 30px
+			box-sizing border-box
+			background #ffffff
+			border none 
+			outline none 
+			border-radius 25px
+			padding-left 60px
+			font-size 20px
+			background #f2f4f7 url('../img/7d7bebe3703d32827d14de8ab67656a8-27+28.jpg') 20px center /27px auto no-repeat
+	.type-container
+		width 100%
+		.wrap
+			display flex
+		.left-menu
+		.right-content
+			overflow scroll
+			-webkit-overflow-scrolling touch
+			&::-webkit-scrollbar
+				display none
+		.left-menu
+			flex 0 0 25%
+			background #f7f9fc
+			.wrap-left
+				padding 50px 0
+				box-sizing border-box
+			.item
+				position relative
+				font-size 20px
+				color #5f687d
+				line-height 3
+				text-align center
+				transition 0.3s
+				cursor pointer
+				&:after
+					content ''
+					position absolute
+					top 0
+					bottom 0
+					left 0
+					width 5px
+					background #2dc17b
+					opacity 0
+					transition 0.3s
+				&.active
+					background #ffffff
+					&:after
+						opacity 1
+		.right-content
+			flex 0 0 75%
+			width 100%
+			.wrap-right
+				padding 0 2% 30px
+				box-sizing border-box
+			.title
+				margin 20px 15px 0
+				display block
+				font-size 16px
+				line-height 2
+				span
+					float left
+					position relative
+					padding-right 20px
+					background  url('../img/5a5aadc86881a157919dd18668d4bce5-20+34.jpg') right center/10px auto no-repeat
+			.container
+				display flex
+				justify-content flex-start
+				flex-wrap wrap
+				.item
+					flex 0 0 33.33%
+					a
+						display block
+						height 50px
+						font-size 14px
+						line-height 50px
+						border-radius 15px
+						text-align center
+						color #000
+						margin 20px 7px 0
+						background #f2f4f7
+					
+					
