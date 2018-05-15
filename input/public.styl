@@ -517,15 +517,46 @@ body
 					height 48px
 					background url('../img/ba69d99de9bd6d91419f274bc57d3220-84+84.svg') center center/48px 100% no-repeat
 				.read
+					position relative
 					padding-left 50px
 					font-size 21px
 					color #909090
 					line-height 30px
-					background url('../img/6bfc63d53c31df5d13e5d571787c0039-51+39.svg') left center/auto 30px no-repeat
+					background url('../img/6bfc63d53c31df5d13e5d571787c0039-51+39.svg') left center/30px auto no-repeat
+					transition 0.3s
 					&.zan
 						background-image url('../img/7e14e39610c03c8e82bafe8fd15b7e08-42+39.svg')
+						&:after
+							content ''
+							position absolute
+							left 0
+							top 0
+							bottom 0
+							width 30px
+							background url('../img/6177949193786a43bcf2401a6b14c6f1-595+841.svg') left center/30px auto no-repeat
+							transition transform 0.3s
+							transform scale(0)
+						&:hover
+							position relative
+							&:after
+								transform scale(1)
 					&.favorites
 						background-image url('../img/cc99a90f7bc63eb7ae9c02dff0451415-88+84.svg')
+						
+						&:after
+							content ''
+							position absolute
+							left 0
+							top 0
+							bottom 0
+							width 30px
+							background url('../img/3b6c1fa4b045007a6490301c563aa3ef-595+841.svg') left center/30px auto no-repeat
+							transition transform 0.3s
+							transform scale(0)
+						&:hover
+							position relative
+							&:after
+								transform scale(1)
 					&.sms
 						background-image url('../img/e62a097ba8e08bed728d0ad1baef778a-46+39.svg')
 		.none-height
