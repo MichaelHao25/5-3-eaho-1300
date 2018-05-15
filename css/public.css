@@ -610,10 +610,7 @@ body {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
-.main .issue .content .row .read.zan:hover {
-  position: relative;
-}
-.main .issue .content .row .read.zan:hover:after {
+.main .issue .content .row .read.zan.active:after {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -634,10 +631,7 @@ body {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
-.main .issue .content .row .read.favorites:hover {
-  position: relative;
-}
-.main .issue .content .row .read.favorites:hover:after {
+.main .issue .content .row .read.favorites.active:after {
   -webkit-transform: scale(1);
           transform: scale(1);
 }

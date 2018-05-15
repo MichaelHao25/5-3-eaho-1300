@@ -65,3 +65,7 @@ $.each($('*[data-js-tabs]'), function(index, el) {
 		$($(el).attr('data-js-tabs')).children().eq(0).show().siblings().hide();;
 	}
 });
+
+$('.main .issue .content .row .read').on('click',function() {
+    $(this).toggleClass('active')
+})
