@@ -769,7 +769,7 @@ body
 // 	overflow hidden	
 // .layout
 // 	position fixed
-// 	top 0
+// 	top 0	
 // 	bottom 0
 // 	left 0
 // 	right 0
@@ -794,7 +794,40 @@ body
 
 .check-login
 	padding-bottom 10vh
+	.user-password-login
+		padding 0 70px
+		.brand
+			display block
+			width 135px
+			margin 70px auto
+			img
+				display block
+				width 100%
+		.row
+			display flex
+			justify-content flex-start
+			padding-top 10px
+			border-bottom 2px solid #d2d2d6
+			color #000000
+			font-size 32px
+			input
+				border none
+				outline none
+				padding 10px 0
+				line-height 56px
+				flex 1 1 auto
+			.label
+				width 150px
+				line-height 76px
+		.option-user
+			display flex
+			justify-content space-between
+			font-size 28px
+			color #000000
+		a.btn-login
+			color #ffffff
 	.pic
+	.sound
 		margin 13vh auto
 		display flex
 		align-items center
@@ -808,6 +841,40 @@ body
 			border-radius 50%
 		input
 			display none
+	.sound
+		border-radius 50%
+		background #43b5ee
+		display flex
+		align-items center
+		justify-content center
+		&.active
+			.bar-2
+			.bar-1
+				opacity 0
+			.bar-3
+				opacity 1
+			.bar-2
+				animation one-bar 2s linear infinite
+			.bar-1
+				animation two-bar 2s linear infinite
+		img
+			width 113px
+			display block
+			border-radius 0
+		.bar
+			position absolute
+			width 100px
+			top 50%
+			transform translateY(-50%)
+		.left-bar
+			left 12%
+		.right-bar
+			right 12%
+		.bar-1
+		.bar-2
+		.bar-3
+			opacity 0
+			fill #ebbc35
 	.login-tips
 		display flex
 		justify-content center
@@ -832,6 +899,38 @@ body
 		border-radius 20px
 		line-height 80px
 		background #f6ad32
+	.other-login
+		padding 0 70px
+		padding-top 50px
+		h3
+			position relative
+			display flex
+			align-items center
+			justify-content center
+			font-size 30px
+			color #6b6b6b
+			text-align center
+			&:after
+				content ''
+				position absolute
+				top 50%
+				left 0
+				right 0
+				height 2px
+				background #e5e5e5
+				margin-top -1px
+				z-index -1
+			span
+				padding 0 30px
+				background #ffffff
+		.option
+			padding 50px 0
+			display flex
+			justify-content space-between
+			a
+			img
+				width 100px
+				display block
 
 
 
@@ -967,4 +1066,17 @@ body
 						margin 20px 7px 0
 						background #f2f4f7
 					
-					
+@keyframes one-bar 
+	0%
+	33%
+		opacity 0
+	100%
+	34%
+		opacity 1
+@keyframes two-bar 
+	0%
+	66%
+		opacity 0
+	100%
+	67%
+		opacity 1
