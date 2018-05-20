@@ -2,6 +2,7 @@
 body
 	font-size 16Px
 	font-family: 'Microsoft yahei', Arial, sans-serif
+	position relative
 .pc
 	@media(min-width 768){
 		left 50%
@@ -295,14 +296,23 @@ body
 		padding 0 30px
 		.form
 			display flex
-			justify-content center
+			justify-content space-between
 			width 100%
 			flex 1
+			.type-toggle
+				display flex
+				align-items center
+				justify-content center
+				width 50px
+				cursor pointer
+				img 
+					display block
+					width 80%
 			.text
-				flex 1
+				flex 0 0 calc(100% - 200px)
 				display block
 				padding 10px
-				width 100%
+				width calc(100% - 200px)
 				line-height 30px
 				box-sizing border-box
 				background #ffffff
@@ -874,7 +884,7 @@ body
 		.bar-2
 		.bar-3
 			opacity 0
-			fill #ebbc35
+			fill #43b5ee
 	.login-tips
 		display flex
 		justify-content center
@@ -977,7 +987,8 @@ body
 
 
 .layout
-	max-width 100%
+	max-width 750px
+	background #ffffff
 	.header-search
 		padding 10px 0
 		border-bottom 1px solid #eef2f7
@@ -1080,3 +1091,17 @@ body
 	100%
 	67%
 		opacity 1
+
+
+
+.type-container-fix
+	position fixed
+	top 0
+	bottom 0
+	z-index 10
+	left 50%
+	transform translateX(-50%)
+	display none
+
+.type-container-fix-active .main
+	display none
