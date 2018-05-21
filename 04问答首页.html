@@ -827,24 +827,29 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/js.js"></script>
     <script>
-            $(window).on('resize', function () {
-            $('.layout .type-container .left-menu').height(window.innerHeight - $('.footer.pc').innerHeight() - $(
-                '.header-search').innerHeight())
+        $(window).on('resize', function () {
+            $('.layout .type-container .left-menu').height(window.innerHeight - $('.footer.pc').innerHeight() -
+                $(
+                    '.header-search').innerHeight())
             $('.layout .type-container .right-content').height(window.innerHeight - $('.footer.pc').innerHeight() -
                 $(
                     '.header-search').innerHeight())
             $('.layout').width(window.innerWidth)
         })
         $(window).trigger('resize');
-        $('.main .search .form .type-toggle').on('click',function () {
-            $('.type-container-fix').fadeIn();
-            $('body').addClass('type-container-fix-active');
+        $('.main .search .form .type-toggle').on('click', function () {
+            $('.type-container-fix').fadeIn('300', function () {
+                $(window).trigger('resize');
+                $('body').addClass('type-container-fix-active');
+            });
+
+
         })
         $('.type-container-fix .type-container-fix_close').on('click', function () {
             $('.type-container-fix').fadeOut();
             $('body').removeClass('type-container-fix-active');
         })
-        </script>
+    </script>
 </body>
 
 </html>

@@ -884,8 +884,12 @@
         })
         $(window).trigger('resize');
         $('.main .search .form .type-toggle').on('click', function () {
-            $('.type-container-fix').fadeIn();
-            $('body').addClass('type-container-fix-active');
+            $('.type-container-fix').fadeIn('300', function () {
+                $(window).trigger('resize');
+                $('body').addClass('type-container-fix-active');
+            });
+
+
         })
         $('.type-container-fix .type-container-fix_close').on('click', function () {
             $('.type-container-fix').fadeOut();
