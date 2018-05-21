@@ -169,22 +169,22 @@ body
 						background #f39800
 				&.item3
 					.pic
-						background #f7ab00
+						background #8968f3  
 				&.item4
 					.pic
 						background #ffc636
 				&.item5
 					.pic
-						background #004ea2
+						background #5fcaea
 				&.item6
 					.pic
 						background #0068b7
 				&.item7
 					.pic
-						background #0075c2
+						background #e65b72
 				&.item8
 					.pic
-						background #008cd6
+						background #7cad91
 		.item
 			padding-top 27px
 			flex 0 0 25%
@@ -743,6 +743,7 @@ body
 	display flex
 	box-shadow 0 0 10px rgba(206,206,206,0.7)
 	background #ffffff
+	z-index 10
 	.item
 		display block
 		padding 10px 0 15px
@@ -864,9 +865,9 @@ body
 			.bar-3
 				opacity 1
 			.bar-2
-				animation one-bar 2s linear infinite
+				animation one-bar 1500ms linear infinite
 			.bar-1
-				animation two-bar 2s linear infinite
+				animation two-bar 1500ms linear infinite
 		img
 			width 113px
 			display block
@@ -992,6 +993,7 @@ body
 	.header-search
 		padding 10px 0
 		border-bottom 1px solid #eef2f7
+		visibility hidden
 		input
 			margin 0 auto
 			display block
@@ -1098,10 +1100,19 @@ body
 	position fixed
 	top 0
 	bottom 0
-	z-index 10
+	z-index 5
 	left 50%
 	transform translateX(-50%)
 	display none
-
+	.footer
+		display none
+	.type-container-fix_close
+		position absolute
+		right 0 
+		top 0
+		width 70px
+		height 70px
+		background  url('../img/close.png') center center/70% auto no-repeat
+		
 .type-container-fix-active .main
 	display none

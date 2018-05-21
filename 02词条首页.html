@@ -175,6 +175,9 @@
 
     <div class="type-container-fix">
         <div class="layout">
+
+            <div class="type-container-fix_close">
+            </div>
             <div class="header-search">
                 <input type="text" placeholder="网易云课堂">
             </div>
@@ -871,9 +874,10 @@
     <script src="js/js.js"></script>
     <script>
         $(window).on('resize', function () {
-            $('.layout .type-container .left-menu').height(window.innerHeight - $('.footer').innerHeight() - $(
-                '.header-search').innerHeight())
-            $('.layout .type-container .right-content').height(window.innerHeight - $('.footer').innerHeight() -
+            $('.layout .type-container .left-menu').height(window.innerHeight - $('.footer.pc').innerHeight() -
+                $(
+                    '.header-search').innerHeight())
+            $('.layout .type-container .right-content').height(window.innerHeight - $('.footer.pc').innerHeight() -
                 $(
                     '.header-search').innerHeight())
             $('.layout').width(window.innerWidth)
@@ -882,6 +886,10 @@
         $('.main .search .form .type-toggle').on('click', function () {
             $('.type-container-fix').fadeIn();
             $('body').addClass('type-container-fix-active');
+        })
+        $('.type-container-fix .type-container-fix_close').on('click', function () {
+            $('.type-container-fix').fadeOut();
+            $('body').removeClass('type-container-fix-active');
         })
     </script>
 </body>
