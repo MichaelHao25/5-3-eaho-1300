@@ -79,3 +79,6 @@ $(window).on('scroll',function(e) {
     console.log($(window).scrollTop());
     $(window).scrollTop()>i_offset_top?$('.new-7-23-course-details .tabs-control').addClass('active'):$('.new-7-23-course-details .tabs-control').removeClass('active')
 })
+
+
+
