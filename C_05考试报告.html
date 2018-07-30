@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head design-width="750">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <!-- <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/> -->
+    <!-- 添加 favicon icon -->
+    <meta name="renderer" content="webkit">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/new7-23.css">
+    <script src="js/font-size.js"></script>
+</head>
+
+<body>
+    <!-- <header class="child-page-header">
+        <h2>警务词条</h2>
+    </header> -->
+    <main class="main">
+        <div class="main-test-details-7-26">
+            <div class="block-progress">
+                <div class="block-progress-header">
+                    <span>
+                        <a href="#" class="close"></a>
+                    </span>
+                    <h3>考试报告</h3>
+                    <span>
+                        <a href="#" class="close vh"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="main-repost-7-26">
+            <h3>2018年06月大中型客货车驾驶人满分考试</h3>
+            <div class="progress">
+                <canvas class="" id="progress-bar" data-progress="40"></canvas>
+            </div>
+            <div class="row">
+                <div class="score">100分</div>
+                <div class="cost-time">00:16:03</div>
+            </div>
+        </div>
+        <div class="main-test-details-7-26">
+            <div class="block-progress">
+                <div class="area">
+                    <div class="title">
+                        <h4>单选题</h4>
+                        <div class="child-progress">
+                            得
+                            <span class="cffc636">8</span>分
+                            <i>/</i>
+                            <span class="cffc636">10</span>分
+                        </div>
+                    </div>
+                    <div class="content report">
+                        <div class="item active">
+                            <span>1</span>
+                        </div>
+                        <div class="item active">
+                            <span>2</span>
+                        </div>
+                        <div class="item active">
+                            <span>3</span>
+                        </div>
+                        <div class="item active">
+                            <span>4</span>
+                        </div>
+                        <div class="item">
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bgf7f7f8"></div>
+
+                <div class="area">
+                    <div class="title">
+                        <h4>多选题</h4>
+                        <div class="child-progress">
+                            得
+                            <span class="cffc636">8</span>分
+                            <i>/</i>
+                            <span class="cffc636">10</span>分
+                        </div>
+                    </div>
+                    <div class="content report">
+                        <div class="item active">
+                            <span>1</span>
+                        </div>
+                        <div class="item active">
+                            <span>2</span>
+                        </div>
+                        <div class="item active">
+                            <span>3</span>
+                        </div>
+                        <div class="item active">
+                            <span>4</span>
+                        </div>
+                        <div class="item">
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <footer class="footer pc">
+        <a class="item" href="#">
+            <div class="pic">
+                <img src="img/0168d66c5294edca6c84b83f94118656-39+39.svg" alt="">
+            </div>
+            <h3>分类</h3>
+        </a>
+        <a class="item" href="#">
+            <div class="pic">
+                <img src="img/8fd4f357f256161e475dd5f7bece8344-39+35.svg" alt="">
+            </div>
+            <h3>问答</h3>
+        </a>
+        <a class="item big">
+            <div class="pic">
+                <img src="img/ada7f27e57d6de6a438f3d95dd5be9a4-48+56.svg" alt="">
+            </div>
+            <h3>首页</h3>
+        </a>
+        <a class="item" href="#">
+            <div class="pic">
+                <img src="img/3ae77da53793502db08ec43546e4ac88-58+45.svg" alt="">
+            </div>
+            <h3>课程</h3>
+        </a>
+        <a class="item" href="#">
+            <div class="pic">
+                <img src="img/cc9a2ab2a49a4d002e398e913d128e7b-36+39.svg" alt="">
+            </div>
+            <h3>我的</h3>
+        </a>
+    </footer> -->
+
+
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/js.js"></script>
+    <script>
+        $('#progress-bar').attr('width', $('.main-repost-7-26 .progress').width());
+        $('#progress-bar').attr('height', $('.main-repost-7-26 .progress').height());
+
+        $(window).on('resize', function () {
+            $('#progress-bar').attr('width', $('.main-repost-7-26 .progress').width());
+            $('#progress-bar').attr('height', $('.main-repost-7-26 .progress').height());
+
+            
+            control_progress.width = $('#progress-bar').width();
+            control_progress.height = $('#progress-bar').height();
+            control_progress.rem = control_progress.width / 200;
+            control_progress.r = control_progress.width / 2;
+
+            control_progress._ctx.translate(control_progress.r, control_progress.r);
+            control_progress.going(control_progress.progress)
+        })
+
+        function progress_bar() {
+            this._ctx = document.getElementById('progress-bar').getContext("2d"),
+                this.progress = parseInt($('#progress-bar').attr('data-progress')),
+                this.width = $('#progress-bar').width(),
+                this.height = $('#progress-bar').height(),
+                this.rem = this.width / 200,
+                this.r = this.width / 2,
+                this.count = 0,
+                this.i = 0;
+
+
+
+            this._ctx.translate(this.r, this.r);
+
+            this.going = function (progress) {
+
+                this._ctx.clearRect(-this.r, -this.r, this.width, this.height);
+
+                this._ctx.beginPath();
+                this._ctx.lineWidth = 12 * this.rem;
+                this._ctx.lineCap = 'round';
+                this._ctx.arc(0, 0, this.r - this._ctx.lineWidth / 2, 0, 2 * Math.PI, false);
+                this._ctx.strokeStyle = "#f7f7f8";
+                this._ctx.stroke();
+
+
+                this._ctx.font = 72 * this.rem + "px Arial bold";
+                this._ctx.fillStyle = '#192141'
+                if (progress < 10) {
+                    this._ctx.fillText(progress, -40 * this.rem, 30 * this.rem);
+                } else {
+                    if (progress == 100) {
+                        this._ctx.fillText(progress, -90 * this.rem, 30 * this.rem);
+                    } else {
+                        this._ctx.fillText(progress, -60 * this.rem, 30 * this.rem);
+                    }
+                }
+
+                this._ctx.font = 36 * this.rem + "px Arial";
+                this._ctx.fillStyle = '#192141'
+                if (progress == 100) {
+                    this._ctx.fillText("分", 40 * this.rem, 30 * this.rem);
+                } else {
+                    this._ctx.fillText("分", 25 * this.rem, 30 * this.rem);
+                }
+
+
+
+                this._ctx.beginPath();
+
+                this._ctx.rotate(-90 * Math.PI / 180);
+
+                this._ctx.lineWidth = 12 * this.rem;
+                this._ctx.arc(0, 0, this.r - this._ctx.lineWidth / 2, 0, 2 * Math.PI * progress / 100, false);
+                this._ctx.strokeStyle = "#ffc211";
+                this._ctx.stroke();
+
+                this._ctx.rotate(90 * Math.PI / 180);
+
+            }
+
+            this.animation = function (progress) {
+                var that = this;
+                var timer = setInterval(function () {
+                    if (that.i != progress) {
+                        if (that.i < progress) {
+                            that.i++;
+                            that.going(that.i);
+                        } else {
+                            that.i--;
+                            that.going(that.i);
+                        }
+                    } else {
+                        that.going(that.i);
+                        clearInterval(timer);
+                    }
+                }, 20, progress);
+            }
+            this.animation(this.progress);
+        }
+
+
+        var control_progress = new progress_bar()
+        control_progress.animation(control_progress.progress = 60)
+    </script>
+
+    <!-- window.requestAnimFrame = (function () {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame ||
+            function (fn) {
+                window.setTimeout(fn, 1000 / 60)
+            };
+    })();
+
+
+    var start = null;
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        var progress = timestamp - start;
+
+
+
+        if (progress < 2000) {
+            window.requestAnimationFrame(step);
+        }
+    }
+    window.requestAnimFrame(step) -->
+
+</body>
+
+</html>

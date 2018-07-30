@@ -550,8 +550,20 @@
                 i
                     color #f7ab00
                 .tips
+                    position relative
                     padding-right 40px
                     background url('../img/8477383177b1a236b2589358a0858e54-29+28.png') right  center/30px auto no-repeat
+                    .layout
+                        position fixed
+                        width 400px
+                        padding 20px
+                        font-size 24px
+                        line-height 34px
+                        background #ffffff
+                        border 2px solid #eeeeee
+                        border-radius 5px
+                        transform translate(10%,40px)
+                        display none
     .block-progress
         .block-progress-header
             display flex
@@ -567,12 +579,23 @@
                 background url('../img/46bd013264c1840643f4a7b2d48121bf-43+42.png') left center/42px auto no-repeat
                 &.vh
                     visibility hidden
+            
+            .close
+                position absolute
+                top 30px
+                left 40px
+                background url('../img/610751e082d9d284ff6f9b247b613a0b-18+31.png') center center /100% auto no-repeat
+                width 18px
+                height 30px
+                &.vh
+                    visibility hidden
             a
                 color #ffffff
                 display block
                 width 100px
                 &.tar
                     text-align right
+        
         .area
             .title
                 padding 0 30px
@@ -590,6 +613,8 @@
                     color #4a4a4a
                     span
                         color #192141
+                        &.cffc636
+                            color #ffc636
                     i
                         color #ffc636
                         padding 0 5px
@@ -634,6 +659,12 @@
                 padding 0 30px
                 height 150px
                 align-items center
+                &.report
+                    .item
+                        color #ffffff
+                        background #51b285
+                        &.active
+                            background #ed4a43
                 .item
                     width 80px
                     height 80px
@@ -672,5 +703,95 @@
             text-align center
             margin 0 auto
             background #f7ab00
-                
+.main-repost-7-26
+    h3
+        font-size 32px
+        color #000000
+        line-height 42px
+        padding 30px 0
+        text-align center
+    .progress
+        padding 20px 0
+        width 200px
+        height 200px
+        margin 0 auto
+    .row
+        padding-bottom 50px
+        border-bottom 3px solid #f7f7f8
+        display flex
+        align-items center
+        justify-content center
+        .score
+        .cost-time
+            padding 0 0 0 50px
+            display block
+            font-size 30px
+            color #192141
+            line-height 40px
+            height 40px
+        .score
+            background url('../img/a5b3856358bd99c36d8b4a177088ae35-34+42.png') left center/34px auto no-repeat
+        .cost-time
+            margin-left 50px
+            background url('../img/57c0db9a70369a7b5a8a3285ef378985-39+42.png') left center/39px auto no-repeat
+            // border-left 3px solid #f7f7f8
+            
+.main-issue-resuit-7-26
+    .row
+        padding 0 30px
+        border-bottom 3px solid #f7f7f8 
+        height 100px
+        display flex
+        align-items center
+        justify-content space-between
+        h3
+            font-size 32px
+            color #000000
+        .df
+            display flex
+        .score
+            font-size 24px
+            color #192141
+            background #ffc636
+            line-height 34px
+            height 34px
+            padding 0 20px
+            border-radius 17px
+        .value
+            font-size 24px
+            color #4a4a4a
+            line-height 34px
+            padding-right 20px
+            span
+                line-height 0
+                font-size 36px
+                color #ffc636
+    .issue-container
+        font-size 30px
+        color #4a4a4a
+        line-height 40px
+        min-height 200px
+        box-sizing border-box
+        padding 10px 30px
+        position relative
+        span
+            color #ed4a43
+        .status
+            position absolute
+            bottom 30px
+            right 30px
+            img
+                display block
+                width 120px
+    .title
+        font-size 30px
+        color #000000
+        line-height 80px
+        padding 0 30px
+        background #f7f7f8
+    .right-resuit
+        font-size 28px
+        line-height 38px
+        padding 30px 30px
+        color #4a4a4a
             
