@@ -721,19 +721,28 @@
 }
 .main-test-details-7-26 .block-progress .area .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0 0.3rem;
   height: 1.5rem;
   align-items: center;
 }
-.main-test-details-7-26 .block-progress .area .content.report .item {
+.main-test-details-7-26 .block-progress .area .content.report .item.active span {
   color: #fff;
   background: #51b285;
 }
-.main-test-details-7-26 .block-progress .area .content.report .item.active {
+.main-test-details-7-26 .block-progress .area .content.report .item span {
   background: #ed4a43;
+  color: #fff;
 }
 .main-test-details-7-26 .block-progress .area .content .item {
+  flex: 0 0 20%;
+}
+.main-test-details-7-26 .block-progress .area .content .item.active span {
+  background: #ffc636;
+}
+.main-test-details-7-26 .block-progress .area .content .item span {
+  margin: 0 auto;
+  display: block;
   width: 0.8rem;
   height: 0.8rem;
   background: #e4e4e4;
@@ -742,9 +751,6 @@
   border-radius: 50%;
   text-align: center;
   line-height: 0.8rem;
-}
-.main-test-details-7-26 .block-progress .area .content .item.active {
-  background: #ffc636;
 }
 .main-test-details-7-26 .block-progress .bgf7f7f8 {
   background: #f7f7f8;

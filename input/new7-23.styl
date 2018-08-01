@@ -655,27 +655,35 @@
                         transition 0.3s
             .content
                 display flex
-                justify-content space-between
+                justify-content flex-start
                 padding 0 30px
                 height 150px
                 align-items center
                 &.report
                     .item
-                        color #ffffff
-                        background #51b285
                         &.active
+                            span
+                                color #ffffff
+                                background #51b285
+                        span
                             background #ed4a43
+                            color #ffffff
                 .item
-                    width 80px
-                    height 80px
-                    background #e4e4e4
-                    color #000000
-                    font-size 36px
-                    border-radius 50%
-                    text-align center
-                    line-height 80px
+                    flex 0 0 20%
                     &.active
-                        background #ffc636
+                        span
+                            background #ffc636
+                    span
+                        margin 0 auto
+                        display block
+                        width 80px
+                        height 80px
+                        background #e4e4e4
+                        color #000000
+                        font-size 36px
+                        border-radius 50%
+                        text-align center
+                        line-height 80px
         .bgf7f7f8
             background #f7f7f8
             border-bottom 1px solid #e4e4e4
