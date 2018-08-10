@@ -38,7 +38,7 @@
         <div class="main-repost-7-26">
             <h3>2018年06月大中型客货车驾驶人满分考试</h3>
             <div class="progress">
-                <canvas class="" id="progress-bar" data-progress="40"></canvas>
+                <canvas class="" id="progress-bar" data-progress="120"></canvas>
             </div>
             <div class="row">
                 <div class="score">100分</div>
@@ -189,21 +189,21 @@
                 this._ctx.stroke();
 
 
-                this._ctx.font = 72 * this.rem + "px Arial bold";
+                this._ctx.font = 72 * this.rem + "px Arail bold";
                 this._ctx.fillStyle = '#192141'
                 if (progress < 10) {
                     this._ctx.fillText(progress, -40 * this.rem, 30 * this.rem);
                 } else {
-                    if (progress == 100) {
+                    if (progress >= 100) {
                         this._ctx.fillText(progress, -90 * this.rem, 30 * this.rem);
                     } else {
                         this._ctx.fillText(progress, -60 * this.rem, 30 * this.rem);
                     }
                 }
 
-                this._ctx.font = 36 * this.rem + "px Arial";
+                this._ctx.font = 36 * this.rem + "px Arail";
                 this._ctx.fillStyle = '#192141'
-                if (progress == 100) {
+                if (progress >= 100) {
                     this._ctx.fillText("分", 40 * this.rem, 30 * this.rem);
                 } else {
                     this._ctx.fillText("分", 25 * this.rem, 30 * this.rem);
@@ -246,7 +246,7 @@
 
 
         var control_progress = new progress_bar()
-        control_progress.animation(control_progress.progress = 60)
+        control_progress.animation(control_progress.progress)
     </script>
 
     <!-- window.requestAnimFrame = (function () {
