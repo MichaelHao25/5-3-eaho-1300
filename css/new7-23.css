@@ -769,7 +769,7 @@
   width: 100%;
 }
 .main-test-details-7-26 .btn-start {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
